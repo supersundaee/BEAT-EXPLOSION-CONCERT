@@ -162,6 +162,7 @@ public class Reciept extends JFrame {
 		area.setBounds(333, 64, 281, 329);
 		contentPane.add(area);
 		
+		//user have to click Generate to print receipt
 		JButton btnNewButton_1 = new JButton("Generate ");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

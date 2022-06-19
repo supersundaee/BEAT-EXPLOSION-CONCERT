@@ -93,6 +93,7 @@ public double price;
 		lblNewLabel.setForeground(new Color(220, 20, 60));
 		lblNewLabel.setFont(new Font("OCR A Extended", Font.BOLD | Font.ITALIC, 40));
 		
+		//Enter user name
 		JLabel lblNewLabel_1 = new JLabel("Full Name  :");
 		lblNewLabel_1.setFont(new Font("Tw Cen MT Condensed", Font.BOLD, 24));
 		lblNewLabel_1.setBounds(16, 128, 129, 26);
@@ -103,6 +104,7 @@ public double price;
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
+		//Enter user icnumber
 		JLabel lblNewLabel_1_1 = new JLabel("IC Number :");
 		lblNewLabel_1_1.setFont(new Font("Tw Cen MT Condensed", Font.BOLD, 24));
 		lblNewLabel_1_1.setBounds(16, 164, 129, 26);
@@ -113,6 +115,7 @@ public double price;
 		textField_1.setBounds(166, 167, 379, 27);
 		frame.getContentPane().add(textField_1);
 		
+		//Enter user email
 		JLabel lblNewLabel_1_1_1 = new JLabel("Email         :");
 		lblNewLabel_1_1_1.setFont(new Font("Tw Cen MT Condensed", Font.BOLD, 24));
 		lblNewLabel_1_1_1.setBounds(16, 200, 129, 26);
@@ -127,6 +130,8 @@ public double price;
 		separator.setBounds(0, 277, 945, 2);
 		frame.getContentPane().add(separator);
 		
+		
+		//User have to select ticket type
 		JLabel lblNewLabel_1_3 = new JLabel("Ticket Type");
 		lblNewLabel_1_3.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1_3.setBackground(new Color(255, 255, 0));
@@ -134,6 +139,7 @@ public double price;
 		lblNewLabel_1_3.setBounds(0, 277, 310, 49);
 		frame.getContentPane().add(lblNewLabel_1_3);
 		
+		//User have to click how many ticket they want
 		final JComboBox cmbTotalSeat = new JComboBox();
 		cmbTotalSeat.setBackground(new Color(32, 178, 170));
 		cmbTotalSeat.setModel(new DefaultComboBoxModel(new String[] {"Total Seat ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}));
@@ -222,6 +228,8 @@ public double price;
 		rdbtnGoldZone.setBounds(73, 458, 134, 32);
 		frame.getContentPane().add(rdbtnGoldZone);
 		
+		
+		//The Price will show after user choose ticket type and total seat
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
 		textField_3.setBounds(390, 557, 198, 42);
@@ -585,6 +593,7 @@ public double price;
 		separator_1.setBounds(0, 609, 945, 2);
 		frame.getContentPane().add(separator_1);
 		
+		//User have to click reset to reset all the information
 		JButton btnReset = new JButton("RESET");
 		btnReset.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		btnReset.addActionListener(new ActionListener() {
@@ -601,6 +610,7 @@ public double price;
 			}
 		});
 		
+		//User have to click exit if they dont want to buy the ticket
 		JButton btnExit = new JButton("EXIT");
 		btnExit.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		btnExit.addActionListener(new ActionListener() {
@@ -614,6 +624,7 @@ public double price;
 			}
 		});
 		
+		//User have to click Submit to make a payment
 		JButton btnSubmit = new JButton("SUBMIT");
 		btnSubmit.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		btnSubmit.addActionListener(new ActionListener() {
@@ -658,11 +669,13 @@ public double price;
 		lblNewLabel_2_1.setBounds(28, 123, 112, 22);
 		panel_1.add(lblNewLabel_2_1);
 		
+		//Seat type will shown
 		textField_5 = new JTextField();
 		textField_5.setBounds(134, 51, 138, 30);
 		panel_1.add(textField_5);
 		textField_5.setColumns(10);
 		
+		//Total seat will shown
 		textField_6 = new JTextField();
 		textField_6.setBounds(134, 123, 138, 30);
 		panel_1.add(textField_6);

@@ -117,11 +117,13 @@ public class paymentPage extends JFrame {
 		lblTotal.setBounds(484, 39, 311, 43);
 		panelConfirmPayment.add(lblTotal);
 		
+		//User have to click Confirm to Print reciept
 		JButton btnConfirm = new JButton("CONFIRM");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Reciept r = new Reciept(Name,icNumber,email,phone,seat,TotalSeat,price);
 				r.show();
+				dispose();
 				
 				
 				
@@ -134,6 +136,7 @@ public class paymentPage extends JFrame {
 		btnConfirm.setBounds(610, 366, 119, 23);
 		panelConfirmPayment.add(btnConfirm);
 		
+		//User have to click Back to return to ticket
 		JButton btnBack = new JButton("BACK");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

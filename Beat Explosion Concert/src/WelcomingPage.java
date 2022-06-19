@@ -47,6 +47,7 @@ public class WelcomingPage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//User have to click buy ticket to go to class ticket
 		JButton btnNewButton = new JButton("BUY TICKET");
 		btnNewButton.addActionListener(new ActionListener() {
 			
