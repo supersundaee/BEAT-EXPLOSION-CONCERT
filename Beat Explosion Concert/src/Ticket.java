@@ -638,8 +638,25 @@ public double price;
 				String TotalSeat = textField_6.getText();
 				double price = Double.parseDouble(textField_3.getText());
 				paymentPage p = new paymentPage(Name,icNumber,email,phone,seat,TotalSeat,price);
+				
+				
+				if(Name.equals("")){
+					JOptionPane.showMessageDialog(null,"Information is not entered");
+					
+				}else if (icNumber.equals("")) {
+					JOptionPane.showMessageDialog(null,"Information is not entered");
+					
+				}else if (phone.equals("")) {
+					JOptionPane.showMessageDialog(null,"Information is not entered");
+				}else if (seat.equals("")) {
+					JOptionPane.showMessageDialog(null,"Information is not entered");
+				}else if (TotalSeat.equals("")) {
+					JOptionPane.showMessageDialog(null,"Information is not entered");
+				}else {
+				
 				p.show();
 				dispose();
+			}
 			}
 
 			private void dispose() {
@@ -655,29 +672,30 @@ public double price;
 		frame.getContentPane().add(btnReset);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(210, 180, 140));
 		panel_1.setBounds(642, 289, 292, 313);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel_2 = new JLabel("SEAT TYPE");
-		lblNewLabel_2.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(28, 51, 112, 22);
+		lblNewLabel_2.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 16));
+		lblNewLabel_2.setBounds(15, 58, 103, 36);
 		panel_1.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("TOTAL SEAT");
-		lblNewLabel_2_1.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 15));
-		lblNewLabel_2_1.setBounds(28, 123, 112, 22);
+		lblNewLabel_2_1.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 16));
+		lblNewLabel_2_1.setBounds(15, 194, 125, 38);
 		panel_1.add(lblNewLabel_2_1);
 		
 		//Seat type will shown
 		textField_5 = new JTextField();
-		textField_5.setBounds(134, 51, 138, 30);
+		textField_5.setBounds(128, 51, 144, 43);
 		panel_1.add(textField_5);
 		textField_5.setColumns(10);
 		
 		//Total seat will shown
 		textField_6 = new JTextField();
-		textField_6.setBounds(134, 123, 138, 30);
+		textField_6.setBounds(128, 194, 144, 38);
 		panel_1.add(textField_6);
 		textField_6.setColumns(10);
 	}

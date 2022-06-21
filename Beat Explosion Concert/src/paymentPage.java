@@ -18,6 +18,7 @@ import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.border.EtchedBorder;
 
 public class paymentPage extends JFrame {
 
@@ -50,7 +51,7 @@ public class paymentPage extends JFrame {
 		setTitle("BEAT EXPLOSION CONCERT TICKET");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1364, 609);
+		setBounds(100, 100, 933, 590);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.DARK_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -58,7 +59,7 @@ public class paymentPage extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panelConfirmPayment = new JPanel();
-		panelConfirmPayment.setBorder(new TitledBorder(null, "CONFIRM PAYMENT", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panelConfirmPayment.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "PAYMENT", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));
 		panelConfirmPayment.setBackground(Color.BLACK);
 		panelConfirmPayment.setBounds(10, 11, 1338, 556);
 		contentPane.add(panelConfirmPayment);
@@ -114,11 +115,11 @@ public class paymentPage extends JFrame {
 		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(price));
 		lblTotal.setForeground(Color.WHITE);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 24));
-		lblTotal.setBounds(484, 39, 311, 43);
+		lblTotal.setBounds(580, 380, 311, 43);
 		panelConfirmPayment.add(lblTotal);
 		
 		//User have to click Confirm to Print reciept
-		JButton btnConfirm = new JButton("CONFIRM");
+		JButton btnConfirm = new JButton("PAY");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Reciept r = new Reciept(Name,icNumber,email,phone,seat,TotalSeat,price);
@@ -133,7 +134,7 @@ public class paymentPage extends JFrame {
 		});
 		btnConfirm.setBackground(new Color(255, 255, 255));
 		btnConfirm.setFont(new Font("Arial", Font.BOLD, 14));
-		btnConfirm.setBounds(610, 366, 119, 23);
+		btnConfirm.setBounds(724, 433, 146, 36);
 		panelConfirmPayment.add(btnConfirm);
 		
 		//User have to click Back to return to ticket
@@ -147,8 +148,14 @@ public class paymentPage extends JFrame {
 		});
 		btnBack.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnBack.setBackground(Color.WHITE);
-		btnBack.setBounds(484, 367, 116, 23);
+		btnBack.setBounds(494, 433, 146, 36);
 		panelConfirmPayment.add(btnBack);
+		
+		JLabel lblNewLabel = new JLabel("Payment Method : Debit / Credit card");
+		lblNewLabel.setFont(new Font("Book Antiqua", Font.BOLD, 22));
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setBounds(10, 395, 410, 48);
+		panelConfirmPayment.add(lblNewLabel);
 		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
